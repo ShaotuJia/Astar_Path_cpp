@@ -49,7 +49,7 @@ void Path::winner(){
 
 	int winner=openSet[0];
 
-				for (int i=0; i< openSet.size(); i++)
+				for (unsigned int i=0; i< openSet.size(); i++)
 				{
 
 					if (dataSet[openSet[i]].f<dataSet[winner].f)
@@ -98,7 +98,7 @@ void Path::updateopenSet()
 
 	vector<int> neighbors= dataSet[current].neighborlabels;
 
-	for (int j=0; j< neighbors.size(); j++)
+	for (unsigned int j=0; j< neighbors.size(); j++)
 	{
 		int neighbor=neighbors[j];
 

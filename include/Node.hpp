@@ -38,7 +38,7 @@ public:
 	double h=0;
 	double f=0;
 	vector<int> neighborlabels;
-	int previouslabel;
+	int previouslabel=0;
 	vector<Node> neighbors;
 	vector<Node> previous;
 	int label=row*colSize+col; //label node with Number and easy for tracking
