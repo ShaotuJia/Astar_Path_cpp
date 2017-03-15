@@ -74,14 +74,14 @@ void Path::reconstructPath(int current){
 		}
 
 		//print out
-		cout<<"path: ";
-		for (auto x: path)
+		cout<<"path: \n"<<"start from:";
+		for (vector<int>::reverse_iterator riter=path.rbegin(); riter!=path.rend();riter++)
 		{
-			cout<<x<<" ";
+			int row=int((*riter)/map.colSize);
+			int col=(*riter)%map.colSize;
+			cout<<"("<<row<<","<< col<<")"<<endl;
 		}
-		cout<<endl;
-
-
+		cout<<"to goal"<<endl;
 
 }
 
