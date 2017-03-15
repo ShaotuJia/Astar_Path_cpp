@@ -14,10 +14,25 @@ This program is to find path in a grid map when given start, goal, and mapSize;
 https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TNDC5xYZSNvnsnW_ek6CWaD0/edit?usp=sharing
 ```
 
-## Run
+## Run Program on Local Computer
 
 - Checkout the repo (and submodules)
 ```
 $ git clone --recursive https://github.com/ShaotuJia/Astar_Path_cpp.git
 ```
-
+- Build this Program 
+```
+$ mkdir build
+$ cmake ..
+$ make ..
+```
+- Run Demo
+```
+$ cd build/app/
+$ ./ Astar_Path-app
+```
+- Run test
+```
+$ cd build/test/
+$ ./ cpp-test
+```
