@@ -11,7 +11,7 @@ TEST(NodeClass,map_grid)
     
    // Path pathToGoal(start,goal,map);
     
-   // pathToGoal.Setdata();
+    pathToGoal.Setdata();
     
     EXPECT_EQ(0,start.label);
     EXPECT_EQ(24,goal.label);
