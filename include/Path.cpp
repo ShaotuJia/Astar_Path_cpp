@@ -18,11 +18,16 @@ int Path::heuristic (Node current, Node goal)
 
 void Path::Setdata(){
 
+	//initilize the label of start and goal
+	start.label=start.row*map.colSize+start.col;
+	goal.label=goal.row*map.colSize+goal.col;
+
 	for (int j=0; j< map.rowSize; ++j)
 	{
 	for (int i=0; i< map.colSize; ++i)
 		{
 		  Node temp(j,i);
+		  temp.label=temp.row*map.colSize+temp.col;
 		  temp.neighborlabels={};
 		  temp.h= heuristic(temp, goal);
 		  if (j != 0)
@@ -146,6 +151,8 @@ void Path::updateopenSet()
 int Path::findPath(){
 
 	Setdata();
+
+
 
 	//set the previouslabel of start point as -1. It is the end condition of path reconstruction
 	dataSet[start.label].previouslabel=-1;

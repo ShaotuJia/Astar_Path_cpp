@@ -26,7 +26,7 @@ public:
 	Node start; // start point
 	Node goal;  // goal point
 	int current = -1; //current point
-	Map map; //initilize the map
+	Map map; //Initialize the map
 	vector<Node> dataSet; //grid map to blocks and save all blocks information into dataSet
     vector<int> openSet;
     vector<int> closedSet;

@@ -18,8 +18,6 @@ public:
 	int colSize;
 
 	Map(int rowSize, int colSize): rowSize(rowSize), colSize(colSize){}
-	//int rowSize =5; // the map size in x-axis
-	//int colSize = 5; // the map size in y-axis
 
 };
 
@@ -29,8 +27,6 @@ class Node
 {
 public:
 
-	int colSize=5;
-	int rowSize=5;
     int row;
     int col;
     Node(int x, int y):row(x),col(y){}
@@ -41,8 +37,7 @@ public:
 	int previouslabel=0;
 	vector<Node> neighbors;
 	vector<Node> previous;
-	int label=row*colSize+col; //label node with Number and easy for tracking
-
+    int label=0; //initialize label with 0
 	//overload operator == for node comparison
 	friend bool operator == (Node a, Node b) throw(){
 
