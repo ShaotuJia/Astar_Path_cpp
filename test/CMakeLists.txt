@@ -1,7 +1,7 @@
 set(GTEST_SHUFFLE 1)
 
 add_executable(
-    Astar-test
+    cpp-test
     main.cpp
     test.cpp
     ../include/Path.cpp
@@ -12,5 +12,5 @@ include_directories(
 )
 
 
-target_include_directories(Astar-test PUBLIC ../vendor/googletest/googletest/include)
-target_link_libraries(Astar-test PUBLIC gtest)
+target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include)
+target_link_libraries(cpp-test PUBLIC gtest)
