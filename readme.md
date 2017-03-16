@@ -16,32 +16,33 @@ https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TN
 
 ## Run Program on Local Computer
 
-- Checkout the repo (and submodules)
+* Checkout the repo (and submodules)
 ```
-$ git clone --recursive https://github.com/ShaotuJia/Astar_Path_cpp.git
+ git clone --recursive https://github.com/ShaotuJia/Astar_Path_cpp.git
 ```
-- Build this Program 
+* Build this Program 
 ```
  mkdir build
  cmake ..
  make ..
 ```
-- Run Demo
+* Run Demo
 ```
  cd build/app/
  ./ Astar_Path-app
 ```
-- Run test
+* Run test
 ```
  cd build/test/
  ./ cpp-test
 ```
-- Run Doxygen
-	-If you have not installed doxygen run following command
+* Run Doxygen
+
+	*If you have not installed doxygen run following command
 	```
 	sudo apt-get install doxygen
 	```
-	-Configure and run Doxyfile
+	*Configure and run Doxyfile
 	```
  	doxygen Doxyfile
  	cd docs
