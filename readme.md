@@ -36,3 +36,8 @@ $ ./ Astar_Path-app
 $ cd build/test/
 $ ./ cpp-test
 ```
+- Run Doxygen
+```
+$ doxygen Doxyfile
+$ cd docs
+```
