@@ -9,23 +9,29 @@ This project is to design a component for robot motion planning. This component 
 
 ## Algorithm Introduction:
 
-	* A* search algorithm is the algorithm used to find a path. It is a very efficient algorithm to find a good path in 		static environment system. F value (good path) is computed by adding H value (heuristic value) and G value (move cost). 	In some cases, H value and G value are weighted before adding. Based on the minimal F value, a computer is able to find 	the good path for robots. During computation, the A* algorithm generates a Binary Search Tree (BST). The routine which 		can reach the target with minimal F value will be saved and others will be removed. This routine is the path that can 		drive the robot to target point.
+A* search algorithm is the algorithm used to find a path. It is a very efficient algorithm to find a good path in static environment system. F value (good path) is computed by adding H value (heuristic value) and G value (move cost). In some cases, H value and G value are weighted before adding. Based on the minimal F value, a computer is able to find the good path for robots. During computation, the A* algorithm generates a Binary Search Tree (BST). The routine which can reach the target with minimal F value will be saved and others will be removed. This routine is the path that can drive the robot to target point.
 
 ## Problem Simplification and Assumptions: 
 
 * For the convenience of computer programming the real world problem need to be simplified and some assumptions should be made. More features can be added by removing simplification and assumptions in the future.
 
-    		* Grid map is used in this project instead of a real map; Grid map separate map into a small unit block with 			  2-D coordinate. For example, (1,2) means the block in the second row and third column; row and column number 		          start from 0. 
-    		* Moving cost g-value from one block to adjacent block is 1.
-    		* The weight for heuristic distance is 1; F-value = g-value + weight * h-value; here weight = 1;
-    		* The robot can only go to its horizontal and vertical neighbor blocks; NO diagonal neighbor.
+ * Grid map is used in this project instead of a real map; Grid map separate map into a small unit block with 2-D coordinate. For example, (1,2) means the block in the second row and third column; row and column number start from 0.
+ 
+ * Moving cost g-value from one block to adjacent block is 1.
+
+ * The weight for heuristic distance is 1; F-value = g-value + weight * h-value; here weight = 1.
+
+ * The robot can only go to its horizontal and vertical neighbor blocks; NO diagonal neighbor.
 
 ## Instruction for users:
 
-	* Component codes in include folder; a main.cpp in 'app' folder to check all functions; google test code in the 'test' 		  folder. 
-    	* To run this program open app/main.cpp and set up start, goal, obstacles and map. Then, use the findPath function to 		  get a path. If the program can find the GOAL, every block coordinate that the robot passed will be output on the 		  screen. 
-    	* In app/main.cpp there are several parts to check every circumstance. Each part is hidden as a comment. Users can 		  release one part to see the result in this circumstance. 
-    	* To easily check every variable and function in classes. Temporally, all class members are public. That would be 		  changed later.
+* Component codes in include folder; a main.cpp in 'app' folder to check all functions; google test code in the 'test' folder.
+ 
+* To run this program open app/main.cpp and set up start, goal, obstacles and map. Then, use the findPath function to get a path. If the program can find the GOAL, every block coordinate that the robot passed will be output on the screen. 
+
+* In app/main.cpp there are several parts to check every circumstance. Each part is hidden as a comment. Users can release one part to see the result in this circumstance.
+ 
+* To easily check every variable and function in classes. Temporally, all class members are public. That would be changed later.
 
 ## Project Backlog
 
@@ -59,13 +65,13 @@ This project is to design a component for robot motion planning. This component 
  ./ cpp-test
 ```
 * Genearate Doxygen Documentation
-
-	* If you have not installed doxygen run following command before run Doxyfile
-	```
-	sudo apt-get install doxygen
-	```
-	* Run Doxyfile
-	```
- 	doxygen Doxyfile
- 	cd docs
-	```
+ 
+ * If you have not installed doxygen run following command before run Doxyfile
+  ```
+   sudo apt-get install doxygen
+  ```
+ * Run Doxyfile
+  ```
+   doxygen Doxyfile
+   cd docs
+  ```
