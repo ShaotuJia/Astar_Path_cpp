@@ -1,0 +1,215 @@
+\hypertarget{classPath}{}\section{Path Class Reference}
+\label{classPath}\index{Path@{Path}}
+
+
+{\ttfamily \#include $<$Path.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPath_aa44674f9cfc08c9bcfa9dea22a32b613}{Path} (\hyperlink{classNode}{Node} \hyperlink{classPath_a82f8a235d983ef188f162bf650ef4a47}{start}, \hyperlink{classNode}{Node} \hyperlink{classPath_a84f44ef4fe5af14812dfcbc9f8625fc1}{goal}, \hyperlink{classMap}{Map} \hyperlink{classPath_ac69916a76b41530a848ceb3238b82441}{map})
+\item 
+void \hyperlink{classPath_a0487872dab008b8ebd27f23d27a52ca7}{set\+Obstacle} (vector$<$ \hyperlink{classNode}{Node} $>$ obs)
+\item 
+int \hyperlink{classPath_a41badb5baafeabe22b5c3dff132d25c6}{heuristic} (\hyperlink{classNode}{Node} \hyperlink{classPath_a3070eec5809bb39f9738b1025a9b567f}{current}, \hyperlink{classNode}{Node} \hyperlink{classPath_a84f44ef4fe5af14812dfcbc9f8625fc1}{goal})
+\begin{DoxyCompactList}\small\item\em heuristic function taking two arguments and return integer \end{DoxyCompactList}\item 
+void \hyperlink{classPath_a27e051fa22336b2b3fbac553dc16ea58}{remove} (vector$<$ int $>$ \&Set, int \hyperlink{classPath_a3070eec5809bb39f9738b1025a9b567f}{current})
+\begin{DoxyCompactList}\small\item\em remove function taking two arguments, one pass by reference, one pass by value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPath_a46adcdba89032c765f282e74b998085f}\label{classPath_a46adcdba89032c765f282e74b998085f}} 
+void \hyperlink{classPath_a46adcdba89032c765f282e74b998085f}{Setdata} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPath_a46adcdba89032c765f282e74b998085f}{Setdata()} function is to grid map and save information of each \hyperlink{classNode}{Node} to data\+Set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPath_a5ab3041f956a871aa5c8dd7b6f225f2b}\label{classPath_a5ab3041f956a871aa5c8dd7b6f225f2b}} 
+void \hyperlink{classPath_a5ab3041f956a871aa5c8dd7b6f225f2b}{winner} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPath_a5ab3041f956a871aa5c8dd7b6f225f2b}{winner()} function is to find the \hyperlink{classNode}{Node} with minimum F-\/value in open\+Set \end{DoxyCompactList}\item 
+void \hyperlink{classPath_aef81fce3aff1781467bbd0c620220c78}{reconstruct\+Path} (int c)
+\item 
+void \hyperlink{classPath_a9de6800363177b6346a05ca55ccc2d05}{updateopen\+Set} ()
+\item 
+int \hyperlink{classPath_a038e211ce369fa9b447a7dd674104166}{find\+Path} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node} \hyperlink{classPath_a82f8a235d983ef188f162bf650ef4a47}{start}
+\item 
+\hyperlink{classNode}{Node} \hyperlink{classPath_a84f44ef4fe5af14812dfcbc9f8625fc1}{goal}
+\item 
+int \hyperlink{classPath_a3070eec5809bb39f9738b1025a9b567f}{current} = -\/1
+\item 
+\hyperlink{classMap}{Map} \hyperlink{classPath_ac69916a76b41530a848ceb3238b82441}{map}
+\item 
+vector$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classPath_a7aea225a45024d0b947d9095a5bd845e}{data\+Set}
+\item 
+vector$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classPath_a367bfca621140baf7bf10bf10dde17de}{obstacles}
+\item 
+vector$<$ int $>$ \hyperlink{classPath_ae16b96f2224219e117523d0693e66d3c}{open\+Set}
+\item 
+vector$<$ int $>$ \hyperlink{classPath_ad8a4a1de4c251768f60b28834466caaa}{closed\+Set}
+\item 
+vector$<$ int $>$ \hyperlink{classPath_aca5a9fe40d1b40eb19a552d86c6b8891}{path}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classPath}{Path} is dependent to class \hyperlink{classNode}{Node} and class \hyperlink{classMap}{Map}; It is to find the path from start to goal with minimum f value (f = g + h) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPath_aa44674f9cfc08c9bcfa9dea22a32b613}\label{classPath_aa44674f9cfc08c9bcfa9dea22a32b613}} 
+\index{Path@{Path}!Path@{Path}}
+\index{Path@{Path}!Path@{Path}}
+\subsubsection{\texorpdfstring{Path()}{Path()}}
+{\footnotesize\ttfamily Path\+::\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}}]{start,  }\item[{\hyperlink{classNode}{Node}}]{goal,  }\item[{\hyperlink{classMap}{Map}}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A constructor; Initialize class \hyperlink{classPath}{Path} with start, goal node and map 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPath_a038e211ce369fa9b447a7dd674104166}\label{classPath_a038e211ce369fa9b447a7dd674104166}} 
+\index{Path@{Path}!find\+Path@{find\+Path}}
+\index{find\+Path@{find\+Path}!Path@{Path}}
+\subsubsection{\texorpdfstring{find\+Path()}{findPath()}}
+{\footnotesize\ttfamily int Path\+::find\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+find\+Path function; This function is to find the optimal path from start to goal \begin{DoxySeeAlso}{See also}
+\hyperlink{classPath_a41badb5baafeabe22b5c3dff132d25c6}{heuristic()} 
+
+\hyperlink{classPath_a27e051fa22336b2b3fbac553dc16ea58}{remove()} 
+
+\hyperlink{classPath_a46adcdba89032c765f282e74b998085f}{Setdata()} 
+
+\hyperlink{classPath_a5ab3041f956a871aa5c8dd7b6f225f2b}{winner()} 
+
+\hyperlink{classPath_aef81fce3aff1781467bbd0c620220c78}{reconstruct\+Path()} 
+
+\hyperlink{classPath_a9de6800363177b6346a05ca55ccc2d05}{updateopen\+Set()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classPath_a41badb5baafeabe22b5c3dff132d25c6}\label{classPath_a41badb5baafeabe22b5c3dff132d25c6}} 
+\index{Path@{Path}!heuristic@{heuristic}}
+\index{heuristic@{heuristic}!Path@{Path}}
+\subsubsection{\texorpdfstring{heuristic()}{heuristic()}}
+{\footnotesize\ttfamily int Path\+::heuristic (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}}]{current,  }\item[{\hyperlink{classNode}{Node}}]{goal }\end{DoxyParamCaption})}
+
+
+
+heuristic function taking two arguments and return integer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & the \hyperlink{classNode}{Node} robot currently in \\
+\hline
+{\em goal} & the goal robot targets to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Manhattan distance between two Nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPath_aef81fce3aff1781467bbd0c620220c78}\label{classPath_aef81fce3aff1781467bbd0c620220c78}} 
+\index{Path@{Path}!reconstruct\+Path@{reconstruct\+Path}}
+\index{reconstruct\+Path@{reconstruct\+Path}!Path@{Path}}
+\subsubsection{\texorpdfstring{reconstruct\+Path()}{reconstructPath()}}
+{\footnotesize\ttfamily void Path\+::reconstruct\+Path (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+reconstruction\+Path function taking one integer argument; This function is to track back path that robot goes through and output the path 
+\begin{DoxyParams}{Parameters}
+{\em c} & This is the node label that robot currently in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPath_a27e051fa22336b2b3fbac553dc16ea58}\label{classPath_a27e051fa22336b2b3fbac553dc16ea58}} 
+\index{Path@{Path}!remove@{remove}}
+\index{remove@{remove}!Path@{Path}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Path\+::remove (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{Set,  }\item[{int}]{current }\end{DoxyParamCaption})}
+
+
+
+remove function taking two arguments, one pass by reference, one pass by value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Set} & This is the vector set wants to delete an element \\
+\hline
+{\em current} & This the label of current \hyperlink{classNode}{Node} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPath_a0487872dab008b8ebd27f23d27a52ca7}\label{classPath_a0487872dab008b8ebd27f23d27a52ca7}} 
+\index{Path@{Path}!set\+Obstacle@{set\+Obstacle}}
+\index{set\+Obstacle@{set\+Obstacle}!Path@{Path}}
+\subsubsection{\texorpdfstring{set\+Obstacle()}{setObstacle()}}
+{\footnotesize\ttfamily void Path\+::set\+Obstacle (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{classNode}{Node} $>$}]{obs }\end{DoxyParamCaption})}
+
+obstacle function is to set obstacles on map 
+\begin{DoxyParams}{Parameters}
+{\em obs} & This the vector contains obstacles \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classPath_ad8a4a1de4c251768f60b28834466caaa}{closed\+Set} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classPath_a9de6800363177b6346a05ca55ccc2d05}\label{classPath_a9de6800363177b6346a05ca55ccc2d05}} 
+\index{Path@{Path}!updateopen\+Set@{updateopen\+Set}}
+\index{updateopen\+Set@{updateopen\+Set}!Path@{Path}}
+\subsubsection{\texorpdfstring{updateopen\+Set()}{updateopenSet()}}
+{\footnotesize\ttfamily void Path\+::updateopen\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+updateopen\+Set function; This function is to add current\textquotesingle{}s neighbors to open\+Set which have not occurred in open\+Set and close\+Set 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPath_ad8a4a1de4c251768f60b28834466caaa}\label{classPath_ad8a4a1de4c251768f60b28834466caaa}} 
+\index{Path@{Path}!closed\+Set@{closed\+Set}}
+\index{closed\+Set@{closed\+Set}!Path@{Path}}
+\subsubsection{\texorpdfstring{closed\+Set}{closedSet}}
+{\footnotesize\ttfamily vector$<$int$>$ Path\+::closed\+Set}
+
+A public vector; The vector contain all \hyperlink{classNode}{Node}\textquotesingle{}s labels which have checked\+Initialize closed\+Set \mbox{\Hypertarget{classPath_a3070eec5809bb39f9738b1025a9b567f}\label{classPath_a3070eec5809bb39f9738b1025a9b567f}} 
+\index{Path@{Path}!current@{current}}
+\index{current@{current}!Path@{Path}}
+\subsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily int Path\+::current = -\/1}
+
+A public variable; Initialize label of current node as -\/1\+Initialize label of current node as -\/1 \mbox{\Hypertarget{classPath_a7aea225a45024d0b947d9095a5bd845e}\label{classPath_a7aea225a45024d0b947d9095a5bd845e}} 
+\index{Path@{Path}!data\+Set@{data\+Set}}
+\index{data\+Set@{data\+Set}!Path@{Path}}
+\subsubsection{\texorpdfstring{data\+Set}{dataSet}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classNode}{Node}$>$ Path\+::data\+Set}
+
+A public vector; The vector contain all Nodes in the mapgrid map to blocks and save all blocks information into data\+Set \mbox{\Hypertarget{classPath_a84f44ef4fe5af14812dfcbc9f8625fc1}\label{classPath_a84f44ef4fe5af14812dfcbc9f8625fc1}} 
+\index{Path@{Path}!goal@{goal}}
+\index{goal@{goal}!Path@{Path}}
+\subsubsection{\texorpdfstring{goal}{goal}}
+{\footnotesize\ttfamily \hyperlink{classNode}{Node} Path\+::goal}
+
+A public variable; The goal where the robot targets togoal point \mbox{\Hypertarget{classPath_ac69916a76b41530a848ceb3238b82441}\label{classPath_ac69916a76b41530a848ceb3238b82441}} 
+\index{Path@{Path}!map@{map}}
+\index{map@{map}!Path@{Path}}
+\subsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily \hyperlink{classMap}{Map} Path\+::map}
+
+A public declaration; Declare class \hyperlink{classMap}{Map} and it will be used inside class \hyperlink{classPath}{Path} computation\+Initialize map \mbox{\Hypertarget{classPath_a367bfca621140baf7bf10bf10dde17de}\label{classPath_a367bfca621140baf7bf10bf10dde17de}} 
+\index{Path@{Path}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!Path@{Path}}
+\subsubsection{\texorpdfstring{obstacles}{obstacles}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classNode}{Node}$>$ Path\+::obstacles}
+
+A public vector; This contain all Nodes set as obstaclesget obstacles \mbox{\Hypertarget{classPath_ae16b96f2224219e117523d0693e66d3c}\label{classPath_ae16b96f2224219e117523d0693e66d3c}} 
+\index{Path@{Path}!open\+Set@{open\+Set}}
+\index{open\+Set@{open\+Set}!Path@{Path}}
+\subsubsection{\texorpdfstring{open\+Set}{openSet}}
+{\footnotesize\ttfamily vector$<$int$>$ Path\+::open\+Set}
+
+A public vector; The vector contain all \hyperlink{classNode}{Node}\textquotesingle{}s labels which have not checked\+Initialize open\+Set \mbox{\Hypertarget{classPath_aca5a9fe40d1b40eb19a552d86c6b8891}\label{classPath_aca5a9fe40d1b40eb19a552d86c6b8891}} 
+\index{Path@{Path}!path@{path}}
+\index{path@{path}!Path@{Path}}
+\subsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily vector$<$int$>$ Path\+::path}
+
+A public vector; This vector contain the path that robot goes through from start to goalpath from start to goal \mbox{\Hypertarget{classPath_a82f8a235d983ef188f162bf650ef4a47}\label{classPath_a82f8a235d983ef188f162bf650ef4a47}} 
+\index{Path@{Path}!start@{start}}
+\index{start@{start}!Path@{Path}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \hyperlink{classNode}{Node} Path\+::start}
+
+A public variable; The \hyperlink{classNode}{Node} where the robot startsstart point 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Path_8hpp}{Path.\+hpp}\item 
+include/\hyperlink{Path_8cpp}{Path.\+cpp}\end{DoxyCompactItemize}

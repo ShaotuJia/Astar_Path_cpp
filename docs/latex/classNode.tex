@@ -1,0 +1,128 @@
+\hypertarget{classNode}{}\section{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+{\ttfamily \#include $<$Node.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_a23a19f53dfbb18fec58cdac90de3d144}{Node} (int x, int y)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classNode_ac13876b3a7e7e1f316bcd922204e5baa}{row}
+\item 
+int \hyperlink{classNode_abdb252855cd894ac2d09b16ff1446a3a}{col}
+\item 
+double \hyperlink{classNode_af93b606cf10abfe1766617ad9de59b01}{g} = 0
+\item 
+double \hyperlink{classNode_ae96fc081027353fbe793c35ea511116b}{h} = 0
+\item 
+double \hyperlink{classNode_aa78fc6cd04892bc631b80d023ef088c4}{f} = 0
+\item 
+vector$<$ int $>$ \hyperlink{classNode_a85bbcd7c4153edd6075b2f3547633ae1}{neighborlabels}
+\item 
+int \hyperlink{classNode_acf96db5e58c9826e10c4c07b2dd70113}{previouslabel} = 0
+\item 
+vector$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classNode_a11950d219110a00069a2135d8815b2d9}{neighbors}
+\item 
+vector$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classNode_aa0ce37b5ddcc3dca47ce94f9a9b580fb}{previous}
+\item 
+int \hyperlink{classNode_ab2c4f74231b19640104ac28fd17dae18}{label} = 0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classNode_a25c0d19e60219456d5215abc584df43f}{operator==} (\hyperlink{classNode}{Node} a, \hyperlink{classNode}{Node} b)  throw ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classNode}{Node} This class is to save all necessary information for each unit \hyperlink{classNode}{Node} in map 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNode_a23a19f53dfbb18fec58cdac90de3d144}\label{classNode_a23a19f53dfbb18fec58cdac90de3d144}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A class constructor; Initialize class member row and col 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classNode_a25c0d19e60219456d5215abc584df43f}\label{classNode_a25c0d19e60219456d5215abc584df43f}} 
+\index{Node@{Node}!operator==@{operator==}}
+\index{operator==@{operator==}!Node@{Node}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}}]{a,  }\item[{\hyperlink{classNode}{Node}}]{b }\end{DoxyParamCaption}) throw  ) \hspace{0.3cm}{\ttfamily [friend]}}
+
+operator overload; Comparison between two Nodes; if they have same row and col they are same \hyperlink{classNode}{Node} 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNode_abdb252855cd894ac2d09b16ff1446a3a}\label{classNode_abdb252855cd894ac2d09b16ff1446a3a}} 
+\index{Node@{Node}!col@{col}}
+\index{col@{col}!Node@{Node}}
+\subsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily int Node\+::col}
+
+A public variable; col is the col number of \hyperlink{classNode}{Node} in mapcol number of \hyperlink{classNode}{Node} in map \mbox{\Hypertarget{classNode_aa78fc6cd04892bc631b80d023ef088c4}\label{classNode_aa78fc6cd04892bc631b80d023ef088c4}} 
+\index{Node@{Node}!f@{f}}
+\index{f@{f}!Node@{Node}}
+\subsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily double Node\+::f = 0}
+
+A public variable; f = g + h; Initially set to 0f = g + h \mbox{\Hypertarget{classNode_af93b606cf10abfe1766617ad9de59b01}\label{classNode_af93b606cf10abfe1766617ad9de59b01}} 
+\index{Node@{Node}!g@{g}}
+\index{g@{g}!Node@{Node}}
+\subsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily double Node\+::g = 0}
+
+moving cost from one \hyperlink{classNode}{Node} to another \mbox{\Hypertarget{classNode_ae96fc081027353fbe793c35ea511116b}\label{classNode_ae96fc081027353fbe793c35ea511116b}} 
+\index{Node@{Node}!h@{h}}
+\index{h@{h}!Node@{Node}}
+\subsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily double Node\+::h = 0}
+
+heuristic distance; Manhattan distance between current \hyperlink{classNode}{Node} to goal \mbox{\Hypertarget{classNode_ab2c4f74231b19640104ac28fd17dae18}\label{classNode_ab2c4f74231b19640104ac28fd17dae18}} 
+\index{Node@{Node}!label@{label}}
+\index{label@{label}!Node@{Node}}
+\subsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily int Node\+::label = 0}
+
+A public variable; label is a integer that computed by row and col to ease the operation in open\+Set and closed\+Setlabel is a integer that computed by row and col to ease the operation in open\+Set and closed\+Set \mbox{\Hypertarget{classNode_a85bbcd7c4153edd6075b2f3547633ae1}\label{classNode_a85bbcd7c4153edd6075b2f3547633ae1}} 
+\index{Node@{Node}!neighborlabels@{neighborlabels}}
+\index{neighborlabels@{neighborlabels}!Node@{Node}}
+\subsubsection{\texorpdfstring{neighborlabels}{neighborlabels}}
+{\footnotesize\ttfamily vector$<$int$>$ Node\+::neighborlabels}
+
+A public vector; Save all labels of neighbor nodes\+Save all labels of neighbor nodes \mbox{\Hypertarget{classNode_a11950d219110a00069a2135d8815b2d9}\label{classNode_a11950d219110a00069a2135d8815b2d9}} 
+\index{Node@{Node}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!Node@{Node}}
+\subsubsection{\texorpdfstring{neighbors}{neighbors}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classNode}{Node}$>$ Node\+::neighbors}
+
+A public vector; Save all neighbor Nodes\+Save all neighbor Nodes \mbox{\Hypertarget{classNode_aa0ce37b5ddcc3dca47ce94f9a9b580fb}\label{classNode_aa0ce37b5ddcc3dca47ce94f9a9b580fb}} 
+\index{Node@{Node}!previous@{previous}}
+\index{previous@{previous}!Node@{Node}}
+\subsubsection{\texorpdfstring{previous}{previous}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classNode}{Node}$>$ Node\+::previous}
+
+A public vector; Save all parent Node\+Save all parent \hyperlink{classNode}{Node} \mbox{\Hypertarget{classNode_acf96db5e58c9826e10c4c07b2dd70113}\label{classNode_acf96db5e58c9826e10c4c07b2dd70113}} 
+\index{Node@{Node}!previouslabel@{previouslabel}}
+\index{previouslabel@{previouslabel}!Node@{Node}}
+\subsubsection{\texorpdfstring{previouslabel}{previouslabel}}
+{\footnotesize\ttfamily int Node\+::previouslabel = 0}
+
+A public variable; The label of parent \hyperlink{classNode}{Node}; for later path reconstruction\+The label of parent \hyperlink{classNode}{Node}; for later path reconstruction \mbox{\Hypertarget{classNode_ac13876b3a7e7e1f316bcd922204e5baa}\label{classNode_ac13876b3a7e7e1f316bcd922204e5baa}} 
+\index{Node@{Node}!row@{row}}
+\index{row@{row}!Node@{Node}}
+\subsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily int Node\+::row}
+
+A public variable; row is the row number of \hyperlink{classNode}{Node} in maprow number of \hyperlink{classNode}{Node} in map 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Node_8hpp}{Node.\+hpp}\end{DoxyCompactItemize}
