@@ -11,6 +11,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <cstdlib>
 #include "Node.hpp"
 
 using std::cout;
@@ -55,6 +56,12 @@ public:
 
 	/*
 	 * A public vector
+	 * This contain all Nodes set as obstacles
+	 */
+	vector <Node> obstacles; /**< get obstacles */
+
+	/*
+	 * A public vector
 	 * The vector contain all Node's labels which have not checked
 	 */
 	vector<int> openSet; /**< Initialize openSet */
@@ -76,6 +83,14 @@ public:
      * Initialize class Path with start, goal node and map
      */
     Path(Node start, Node goal, Map map):start(start),goal(goal),map(map) {}
+
+
+    /*
+     * obstacle function is to set obstacles on map
+     * @param obs This the vector contains obstacles
+     * @see closedSet
+     */
+    void setObstacle(vector<Node> obs);
 
 
     /**

@@ -22,22 +22,27 @@ $ git clone --recursive https://github.com/ShaotuJia/Astar_Path_cpp.git
 ```
 - Build this Program 
 ```
-$ mkdir build
-$ cmake ..
-$ make ..
+ mkdir build
+ cmake ..
+ make ..
 ```
 - Run Demo
 ```
-$ cd build/app/
-$ ./ Astar_Path-app
+ cd build/app/
+ ./ Astar_Path-app
 ```
 - Run test
 ```
-$ cd build/test/
-$ ./ cpp-test
+ cd build/test/
+ ./ cpp-test
 ```
 - Run Doxygen
-```
-$ doxygen Doxyfile
-$ cd docs
-```
+	-If you have not installed doxygen run following command
+	```
+	sudo apt-get install doxygen
+	```
+	-Configure and run Doxyfile
+	```
+ 	doxygen Doxyfile
+ 	cd docs
+	```

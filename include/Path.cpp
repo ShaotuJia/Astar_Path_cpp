@@ -7,6 +7,28 @@
 #include "Path.hpp"
 
 
+void Path::setObstacle(vector <Node> obs) {
+
+	if (obs.empty()) {
+		cout << "No obstacles in this map" << endl;
+	} else {
+		for (auto x : obs) {
+
+			// Node in obstacles cannot be start or goal node
+			if ( x == start || x == goal) {
+				cout << " !! the obstacle ("<< x.row <<","<< x.col <<")"<< " is start or goal !!\n";
+				std::exit(EXIT_FAILURE);
+			} else {
+
+			x.label = x.row * map.colSize + x.col;
+			closedSet.push_back(x.label);
+			}
+		}
+	}
+
+}
+
+
 int Path::heuristic(Node current, Node goal) {
 	return abs(current.col-goal.col) + abs(current.row-goal.row);
 }
@@ -159,6 +181,8 @@ int Path::findPath() {
 	dataSet[current].g = 0;
 	dataSet[current].f = dataSet[current].g + dataSet[current].h;
 
+	// set obstacles in map
+	setObstacle(obstacles);
 
 
 	while (!openSet.empty()) {
@@ -168,7 +192,6 @@ int Path::findPath() {
 
 	if (current==goal.label) {
 		cout<<"reach the  goal!!"<<endl;
-		cout<<"current: "<<current<<endl;
 		reconstructPath(current);
 		return 0;
 	}

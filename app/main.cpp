@@ -34,9 +34,17 @@ int main() {
 	Path pathtogoal(start,goal,map); /**< Declare class Path */
 
 	/*
+	 * input obstacles
+	 */
+	Node ob1 (1,4);
+    pathtogoal.obstacles.push_back(ob1);
+
+   // pathtogoal.setObstacle(pathtogoal.obstacles);
+
+	/*
 	 * run Setdata() function in Path class
 	 */
-	pathtogoal.Setdata(); /**< Setdata() function in Path class*/
+	//pathtogoal.Setdata(); /**< Setdata() function in Path class*/
 
 	/*
 	 * run findPath() function in Path class to find path for start(0,0) and goal(2,4)
