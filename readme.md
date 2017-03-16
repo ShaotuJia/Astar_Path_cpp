@@ -36,13 +36,13 @@ https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TN
  cd build/test/
  ./ cpp-test
 ```
-* Run Doxygen
+* Genearate Doxygen Documentation
 
-	*If you have not installed doxygen run following command
+	*If you have not installed doxygen run following command before run Doxyfile
 	```
 	sudo apt-get install doxygen
 	```
-	*Configure and run Doxyfile
+	*Run Doxyfile
 	```
  	doxygen Doxyfile
  	cd docs
