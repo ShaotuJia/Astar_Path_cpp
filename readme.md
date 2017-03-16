@@ -9,10 +9,8 @@ This program is to find path in a grid map when given start, goal, and mapSize;
 
 ## Project Backlog
 
-- Product Backlog and Iteration Backlog
-```
-https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TNDC5xYZSNvnsnW_ek6CWaD0/edit?usp=sharing
-```
+- Product Backlog and Iteration Backlog; click [Backlog](https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TNDC5xYZSNvnsnW_ek6CWaD0/edit?usp=sharing)
+
 
 ## Run Program on Local Computer
 
