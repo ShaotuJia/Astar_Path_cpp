@@ -13,7 +13,7 @@ A* search algorithm is the algorithm used to find a path. It is a very efficient
 
 ## Problem Simplification and Assumptions: 
 
-* For the convenience of computer programming the real world problem need to be simplified and some assumptions should be made. More features can be added by removing simplification and assumptions in the future.
+For the convenience of computer programming the real world problem need to be simplified and some assumptions should be made. More features can be added by removing simplification and assumptions in the future.
 
  * Grid map is used in this project instead of a real map; Grid map separate map into a small unit block with 2-D coordinate. For example, (1,2) means the block in the second row and third column; row and column number start from 0.
  

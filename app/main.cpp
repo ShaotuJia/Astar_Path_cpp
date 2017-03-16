@@ -10,46 +10,50 @@
 
 /**
  * This is the demo to check all classes and functions
+ * Release one part and hide others as comments to check different circumstance
  */
 int main() {
 
-    /**
-     * Declare start Node and set coordinate (0,0);
-     */
-	Node start(0,0); /**< Declare start Node and set coordinate (0,0) */
 
 	/**
-	 * Declare goal Node and set coordinate (2,4);
-	 */
-	Node goal(2,4); /**< Declare goal Node and set coordinate (2,4) */
+	 * Part 1: regular circumstance
 
-	/**
-	 * Declare map and set up the map size 5 * 5;
-	 */
-	Map map(5,5); /**< Declare map and set up the map size 5 * 5 */
+	Node start(0,0); // Declare start Node and set coordinate (0,0)
+	Node goal(3,4); // Declare goal Node and set coordinate (2,4)
+	Map map(5,5); // Declare map and set up the map size 5 * 5
+	Path pathtogoal(start,goal,map); //Declare class Path
 
-	/**
-	 * Declare class Path;
-	 */
-	Path pathtogoal(start,goal,map); /**< Declare class Path */
-
-	/**
-	 * input obstacles;
-	 */
 	Node ob1 (1,4);
     pathtogoal.obstacles.push_back(ob1);
+    pathtogoal.findPath(); //run findPath() function in Path class to find path for start(0,0) and goal(2,4)
 
-   // pathtogoal.setObstacle(pathtogoal.obstacles);
+    */
 
-	/**
-	 * run Setdata() function in Path class
-	 */
-	//pathtogoal.Setdata(); /**< Setdata() function in Path class*/
+    /**
+     * Part 2: If the user set obstacle same to goal
+     *
+    Node start(0,0); // Declare start Node and set coordinate (0,0)
+	Node goal(3,4); // Declare goal Node and set coordinate (3,4)
+	Map map(5,5); // Declare map and set up the map size 5 * 5
+	Path pathtogoal(start,goal,map); //Declare class Path
 
-	/**
-	 * run findPath() function in Path class to find path for start(0,0) and goal(2,4)
-	 */
-	pathtogoal.findPath(); /**< run findPath() function in Path class to find path for start(0,0) and goal(2,4) */
+	Node ob1 (3,4);
+    pathtogoal.obstacles.push_back(ob1);
+    pathtogoal.findPath(); //run findPath() function in Path class to find path for start(0,0) and goal(2,4)
+	*/
+
+    /**
+     * Part 3: If the goal out of the map
+     *
+    Node start(0,0); // Declare start Node and set coordinate (0,0)
+	Node goal(6,6); // Declare goal Node and set coordinate (6,6)
+	Map map(5,5); // Declare map and set up the map size 5 * 5
+	Path pathtogoal(start,goal,map); //Declare class Path
+
+	Node ob1 (1,4);
+    pathtogoal.obstacles.push_back(ob1);
+    pathtogoal.findPath(); //run findPath() function in Path class to find path for start(0,0) and goal(2,4)
+	*/
 
 	return 0;
 }
