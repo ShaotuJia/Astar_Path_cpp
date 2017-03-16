@@ -11,6 +11,10 @@ This program is to find path in a grid map when given start, goal, and mapSize;
 
 - Product Backlog and Iteration Backlog; click [Backlog](https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TNDC5xYZSNvnsnW_ek6CWaD0/edit?usp=sharing)
 
+## UML Diagram
+
+- Class Diagram: [here](https://www.lucidchart.com/invitations/accept/17cc5971-77db-40b6-a806-f4a2229acef4)
+- Activity Diagram: [here](https://www.lucidchart.com/invitations/accept/bac51de0-591d-472c-8e74-b2e5685c2957)
 
 ## Run Program on Local Computer
 
