@@ -33,9 +33,9 @@ For the convenience of computer programming the real world problem need to be si
  
 * To easily check every variable and function in classes. Temporally, all class members are public. That would be changed later.
 
-## Project Backlog
+## SIP Docs
 
-- Product Backlog and Iteration Backlog; click [Backlog](https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TNDC5xYZSNvnsnW_ek6CWaD0/edit?usp=sharing)
+- Product & Iteration Backlogs and Time & Defect Logs; click [SIP_Docs](https://docs.google.com/spreadsheets/d/1_wuH_sjkEKzCIiHdhb8TNDC5xYZSNvnsnW_ek6CWaD0/edit?usp=sharing)
 
 ## UML Diagram
 
